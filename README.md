@@ -26,6 +26,10 @@ For issues we want to focus on that are most relevant at any given time, please 
 
 ## License
 
+Upon creating a SchoolRate account, you are consenting to adhere to both our License Agreement and the licenses associated with our third-party packages.
+
+The project operates under the Apache 2.0 License, a permissive license that permits the distribution of the software under specific terms and conditions. Read our License Agreement [here](LICENSE).
+
 ## Support Us
 Your support is valuable to us and helps us dedicate more time to enhancing and maintaining this repository. Here's how you can contribute:
 
