@@ -5,7 +5,7 @@ import FirebaseFirestoreSwift
 
 class AuthService {
     
-    @Published var userSession: FirebaseAuth.User? = nil
+    @Published var userSession: FirebaseAuth.User? /*= nil*/
     
     static let shared = AuthService()
     

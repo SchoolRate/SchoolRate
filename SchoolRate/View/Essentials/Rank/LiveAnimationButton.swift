@@ -6,7 +6,7 @@ struct LiveAnimation: View {
     @State private var isLive = false
     
     var body: some View {
-        TimelineView(.animation) { context in
+        TimelineView(.animation) { /*context*/ _ in
             ZStack {
                 Rectangle()
                     .fill(Color.red)

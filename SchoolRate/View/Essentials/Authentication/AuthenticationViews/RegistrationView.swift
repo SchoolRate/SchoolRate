@@ -3,9 +3,10 @@
 import SwiftUI
 
 struct RegistrationView: View {
-    @Environment(\.colorScheme) var colorScheme: ColorScheme
-    @StateObject var viewModel = RegistrationViewModel()
     @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
+    @StateObject var viewModel = RegistrationViewModel()
     
     var body: some View {
         VStack {
@@ -14,7 +15,7 @@ struct RegistrationView: View {
                 .scaledToFit()
                 .frame(width: 280, height: 280)
             
-            VStack{
+            VStack {
                 TextField("Adresse email", text: $viewModel.email)
                     .textInputAutocapitalization(.never)
                     .modifier(LoginViewModifier())

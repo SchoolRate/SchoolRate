@@ -14,12 +14,13 @@ struct Lycée: Hashable, Codable, Identifiable {
     var name: String
     var adresse: String
     var vote: Int
-    //var state: String
+    // var state: String
     var description: String
     var city: String
     var category: String
 
     private var coordonnées: Coordonnées
+    
     var coordonnéesLieu: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
             latitude: coordonnées.latitude,

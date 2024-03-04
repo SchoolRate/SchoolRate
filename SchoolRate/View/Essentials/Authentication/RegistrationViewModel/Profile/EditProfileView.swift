@@ -10,13 +10,15 @@ struct EditProfileView: View {
     @State private var password = ""
     @State private var email = ""
     @State private var isPrivate = false
+    
     @Environment(\.openURL) private var openURL
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) private var dismiss
+    
     @StateObject var viewModel = EditProfileViewModel()
     @StateObject var userModel = ProfileModel()
     
-    var user: User?{
+    var user: User? {
         return userModel.currentUser
     }
     
@@ -27,6 +29,7 @@ struct EditProfileView: View {
                     Section {
                         HStack {
                             Spacer()
+                            
                             PhotosPicker(selection: $viewModel.selectedItem) {
                                 if let image = viewModel.profileImage {
                                     image
@@ -50,11 +53,13 @@ struct EditProfileView: View {
                                             .frame(width: 130, height: 130)
                                             .background {
                                                 Circle().fill(
+                                                    // swiftlint:disable line_length
                                                     LinearGradient(
                                                         colors: colorScheme == .dark ? [.white, .gray] : [.black, .gray],
                                                         startPoint: .top,
                                                         endPoint: .bottom
                                                     )
+                                                    // swiftlint:enable line_length
                                                 )
                                             }
                                             .overlay(alignment: .bottomTrailing) {
@@ -65,6 +70,7 @@ struct EditProfileView: View {
                                     }
                                 }
                             }
+                            
                             Spacer()
                         }
                     }
@@ -101,6 +107,7 @@ struct EditProfileView: View {
                         TextField("À propos de moi",
                                   text: $bio,
                                   prompt: Text("\(user?.bio ?? "À propos de moi")"))
+                        
                         Toggle(isOn: $isPrivate) {
                             Text("Profil privé")
                                 .font(.system(size: 16, weight: .regular, design: .default))
@@ -116,8 +123,8 @@ struct EditProfileView: View {
                         .textInputAutocapitalization(.never)
                         
                         SecureField("Mot de passe",
-                                  text: $password,
-                                  prompt: Text("Mot de passe"))
+                                    text: $password,
+                                    prompt: Text("Mot de passe"))
                     }
                     
                     Section(header: Text("Général")) {

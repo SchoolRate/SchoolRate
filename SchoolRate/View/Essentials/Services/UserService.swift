@@ -42,4 +42,3 @@ class UserService {
         self.currentUser?.profileImageURL = imageUrl
     }
 }
-

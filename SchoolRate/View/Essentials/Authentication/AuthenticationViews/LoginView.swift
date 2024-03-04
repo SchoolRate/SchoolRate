@@ -15,7 +15,7 @@ struct LoginView: View {
                     .scaledToFit()
                     .frame(width: 280, height: 280)
                 
-                VStack{
+                VStack {
                     TextField("Adresse email", text: $viewModel.email)
                         .textInputAutocapitalization(.never)
                         .modifier(LoginViewModifier())

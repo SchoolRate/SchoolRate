@@ -4,13 +4,15 @@ import SwiftUI
 
 struct ProfileView: View {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
     @StateObject var viewModel = ProfileModel()
     
     @State private var showEditProfile = false
-    
     @State private var selectedFilter: ProfileAnswerReviewFilter = .reviews
-    var user: User?
+    
     @Namespace var animationEffect
+    
+    var user: User?
     
     private var currentUser: User? {
         return viewModel.currentUser
@@ -35,7 +37,8 @@ struct ProfileView: View {
                             .font(.footnote)
                             .foregroundStyle(Color(.systemGray))
                         
-                    }.scrollIndicators(.hidden)
+                    }
+                    .scrollIndicators(.hidden)
                     
                     Spacer()
                     
@@ -59,9 +62,9 @@ struct ProfileView: View {
                     .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
                     .padding(.top, 30)
                 }
-                .sheet(isPresented: $showEditProfile, content: {
+                .sheet(isPresented: $showEditProfile) {
                     EditProfileView()
-                })
+                }
                 
                 VStack {
                     HStack {
@@ -87,10 +90,11 @@ struct ProfileView: View {
                                 }
                             }
                         }
-                    } .padding(.top, 20)
+                    } 
+                    .padding(.top, 20)
                     
                     LazyVStack {
-                        ForEach(0...10, id: \.self) { review in
+                        ForEach(0...10, id: \.self) { /*review*/ _ in
                             ReviewsCell()
                         }
                     }
