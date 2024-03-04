@@ -9,8 +9,12 @@ SchoolRate is a groundbreaking school rating application crafted with students i
 
 ## Motivation
 
+The idea of SchoolRate came to us after we all had, at one point or another in our curriculum, issues with our teachers, or thought that we could improve the way they educate us. Even if we can talk to our teachers to adress these issues, we believe we aren't the only in France who suffer from pedagogical issues, and this is why we had the idea of creating SchoolRate. We aren't perfect either, and are on track to become the ones who "rate those who rate". That's why you can also rate us, and we are looking for feedback during the development of the application.
+
 ## Mission
 
+SchoolRate will strive to deliver a great application, with rich functionality, while not diverting from the primary goal of making education better.
+  
 ## Features
 
 <!--
